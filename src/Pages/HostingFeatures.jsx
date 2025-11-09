@@ -35,7 +35,7 @@ const HostingFeatures = () => {
      
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">
-          Why Choose Our Web Hosting
+          Why Choose Our Hosting
         </h2>
         <p className="text-white mt-3 max-w-2xl mx-auto">
           Experience unmatched performance, security, and reliability — built for businesses, creators, and professionals who want the best hosting environment.

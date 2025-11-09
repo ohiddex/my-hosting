@@ -9,6 +9,7 @@ import Web from "../Pages/Web";
 import Cloud from "../Pages/Cloud";
 import Vps from "../Pages/Vps";
 import Dedicated from "../Pages/Dedicated";
+import Resell from "../Pages/Resell";
 
   const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ import Dedicated from "../Pages/Dedicated";
     {
     path:'/wordPress-hosting',
     element:<Dedicated></Dedicated>
+    },
+    {
+path:'/reseller-hosting',
+element:<Resell></Resell>
     },
     
     

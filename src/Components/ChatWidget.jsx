@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 import {
   ChatBubbleLeftRightIcon,
@@ -20,6 +20,7 @@ const ChatWidget = () => {
     department: "",
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [departments, setDepartments] = useState([]);
 
   const toggleChat = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
@@ -29,12 +30,27 @@ const ChatWidget = () => {
     setIsDropdownOpen(false);
   };
 
-  const departments = [
-    { name: "Sales Department", status: "online" },
-    { name: "Support Department", status: "online" },
-    { name: "Billing Department", status: "offline" },
-    { name: "Technical Department", status: "online" },
-  ];
+  // 🕗 Time logic: Support & Billing are offline from 8 PM – 8 AM
+  useEffect(() => {
+    const now = new Date();
+    const hour = now.getHours();
+    const isOffline = hour >= 20 || hour < 8; // 8 PM – 8 AM
+
+    const updatedDepartments = [
+      { name: "Sales Department", status: "online" },
+      {
+        name: "Support Department",
+        status: isOffline ? "offline" : "online",
+      },
+      {
+        name: "Billing Department",
+        status: isOffline ? "offline" : "online",
+      },
+      { name: "Technical Department", status: "online" },
+    ];
+
+    setDepartments(updatedDepartments);
+  }, []); // runs once on mount
 
   return (
     <>
@@ -95,7 +111,7 @@ const ChatWidget = () => {
               />
             </div>
 
-            {/* Department Dropdown with Arrow + Ping */}
+            {/* Department Dropdown */}
             <div
               className={`relative border ${
                 isDropdownOpen
@@ -118,7 +134,7 @@ const ChatWidget = () => {
                 />
               </div>
 
-              {/* Dropdown */}
+              {/* Dropdown List */}
               {isDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10">
                   <div className="px-3 py-2 border-b text-gray-700 font-medium flex items-center gap-2">
@@ -136,10 +152,14 @@ const ChatWidget = () => {
                       className="px-4 py-2 text-sm hover:bg-blue-50 cursor-pointer flex items-center justify-between"
                     >
                       <span className="text-gray-800">{dept.name}</span>
-                      {dept.status === "online" && (
+                      {dept.status === "online" ? (
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                      ) : (
+                        <span className="relative flex h-2 w-2">
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-gray-400"></span>
                         </span>
                       )}
                     </div>

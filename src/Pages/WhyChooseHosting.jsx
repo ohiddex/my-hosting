@@ -65,7 +65,7 @@ const WhyChooseHosting = () => {
       {/* Header */}
       <div className="text-center mb-12 max-w-3xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">
-          Why Choose Web Hosting?
+          Why Choose This Hosting?
         </h2>
         <p className="text-white mt-3">
           With our Web Hosting plans, you’ll receive more resources for less

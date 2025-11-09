@@ -1,30 +1,24 @@
 import React from "react";
-import {
-  Cog6ToothIcon,
-  WrenchScrewdriverIcon,
-  ServerIcon,
-  GlobeAltIcon,
-} from "@heroicons/react/24/solid";
 
 const panels = [
   {
     name: "Webuzo Control Panel",
-    icon: WrenchScrewdriverIcon,
+    image: "webuzo.png", // replace with your actual image path
     desc: "A lightweight and powerful hosting panel for managing websites, emails, databases, and security from one place. Ideal for VPS and Cloud hosting users.",
   },
   {
     name: "cPanel",
-    icon: Cog6ToothIcon,
+    image: "/Cpanell.png",
     desc: "Industry-leading control panel with advanced file, email, and domain management tools. Trusted for its simplicity and reliability by millions worldwide.",
   },
   {
-    name: "Plesk",
-    icon: ServerIcon,
-    desc: "Perfect for developers and agencies. Manage multiple sites, applications, and customers with advanced automation and security integration.",
+    name: "Custom Panel",
+    image: "custom.png",
+    desc: "Designed for developers and agencies, this platform lets you manage multiple websites, applications, and clients with advanced automation and integrated security.",
   },
   {
     name: "DirectAdmin",
-    icon: GlobeAltIcon,
+    image: "/directadmin.png",
     desc: "A secure and fast alternative control panel offering efficient account management, DNS control, and resource monitoring for performance-focused users.",
   },
 ];
@@ -32,7 +26,7 @@ const panels = [
 const ControlPanels = () => {
   return (
     <section className="bg-white py-16 px-6 lg:px-20">
-   
+      {/* Header */}
       <div className="text-center mb-12 max-w-3xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
           Our Control Panels
@@ -44,18 +38,24 @@ const ControlPanels = () => {
         </p>
       </div>
 
-      {/* Grid Layout */}
+      {/* Grid of Panels */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {panels.map((panel, idx) => (
           <div
             key={idx}
-            className="bg-white border border-blue-100 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition"
+            className="bg-white border border-blue-100 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition hover:scale-[1.02]"
           >
-            <div className="flex justify-center mb-4">
-              <div className="p-3 bg-blue-50 rounded-xl">
-                <panel.icon className="w-8 h-8 text-blue-600" />
-              </div>
+            {/* Image Section */}
+            <div className="flex justify-center mb-5">
+              <img
+                src={panel.image}
+                alt={panel.name}
+                className="w-24 h-24 object-contain"
+                loading="lazy"
+              />
             </div>
+
+            {/* Text */}
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               {panel.name}
             </h3>
@@ -66,7 +66,6 @@ const ControlPanels = () => {
         ))}
       </div>
 
-    
     </section>
   );
 };

@@ -7,36 +7,9 @@ const Footer = () => {
     <footer className="bg-black text-gray-300 pt-12 pb-6 text-sm">
       
       <div className="max-w-6xl mx-auto flex flex-col items-center space-y-8 mb-12 px-4">
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-6 text-center md:text-left">
      
-          <div className="flex justify-center md:justify-start">
-            <img
-              src="/web-logo.png"
-              alt="Hostkito Logo"
-              className="h-10 object-contain"
-            />
-          </div>
-
-          
-          <div className="flex justify-center space-x-4">
-            <img src="/badge1.png" alt="Badge 1" className="h-12 w-auto" />
-            <img src="/badge2.png" alt="Badge 2" className="h-12 w-auto" />
-            <img src="/badge3.png" alt="Badge 3" className="h-12 w-auto" />
-          </div>
-
-        
-          <div className="flex justify-center md:justify-end">
-            <NavLink
-              to="/about"
-              className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg font-medium transition-transform duration-200 hover:scale-105"
-            >
-              Find more about us
-            </NavLink>
-          </div>
-        </div>
-
-      
-        <div className="flex flex-wrap justify-center gap-3">
+         <div className="flex flex-wrap justify-center gap-3 border-b border-gray-800 pb-2 ">
+             <h1 className="pt-1">Pay with</h1>
           <div className="bg-white p-1 rounded">
             <img src="/visa.png" alt="Visa" className="h-6" />
           </div>
@@ -52,7 +25,37 @@ const Footer = () => {
           <div className="bg-white p-1 rounded">
             <img src="/amex.png" alt="Amex" className="h-6" />
           </div>
+          <div className="bg-white p-1 rounded">
+            <img src="/ssl.png" alt="Stripe" className="h-6" />
+          </div>
         </div>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-6 text-center md:text-left">
+     
+          <div className="flex justify-center md:justify-start">
+            <img
+              src="/foott.png"
+              alt="Hostkito Logo"
+              className="h-10 object-contain"
+            />
+          
+          </div>
+
+          
+         
+
+        
+          <div className="flex justify-center md:justify-end">
+            <NavLink
+              to="/about"
+              className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium transition-transform duration-200 hover:scale-105"
+            >
+              Find more about us
+            </NavLink>
+          </div>
+        </div>
+
+      
+       
       </div>
 
    
@@ -108,16 +111,49 @@ const Footer = () => {
   
       <div className="max-w-6xl mx-auto border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-gray-500 text-xs px-4 space-y-4 sm:space-y-0">
         <p className="text-center sm:text-left">
-          Copyright © 2025 <span className="text-white font-semibold">Hostkito</span>. All Rights Reserved.
+          Copyright © 2025 <span className="text-white font-semibold">Hostkloud</span>. All Rights Reserved.
         </p>
 
      
         <div className="flex space-x-5 justify-center">
-          <NavLink to="/linkedin" className="hover:text-white"><Linkedin size={20} /></NavLink>
-          <NavLink to="/youtube" className="hover:text-white"><Youtube size={20} /></NavLink>
-          <NavLink to="/instagram" className="hover:text-white"><Instagram size={20} /></NavLink>
-          <NavLink to="/facebook" className="hover:text-white"><Facebook size={20} /></NavLink>
-          <NavLink to="/music" className="hover:text-white"><Music size={20} /></NavLink>
+          <a
+        href="https://www.linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition-colors text-gray-600 sm:text-gray-700"
+      >
+        <Linkedin size={20} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+      </a>
+
+      <a
+        href="https://www.youtube.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition-colors text-gray-600 sm:text-gray-700"
+      >
+        <Youtube size={20} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+      </a>
+
+      
+      <a
+        href="https://www.instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition-colors text-gray-600 sm:text-gray-700"
+      >
+        <Instagram size={20} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+      </a>
+
+     
+      <a
+        href="https://www.facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white transition-colors text-gray-600 sm:text-gray-700"
+      >
+        <Facebook size={20} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+      </a>
+          
         </div>
       </div>
     </footer>

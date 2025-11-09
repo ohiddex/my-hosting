@@ -10,12 +10,12 @@ import Review from '../Components/Review';
 import Faq from '../Components/Faq';
 import Weekly from '../Components/Weekly';
 import Speed from '../Components/Speed';
-import ChatWidget from '../Components/ChatWidget';
+
 
 const Home = () => {
     return (
         <div>
-            {/* <ChatWidget></ChatWidget> */}
+           
             <Hero></Hero>
             <Package></Package>
             <LogoSlider></LogoSlider>
