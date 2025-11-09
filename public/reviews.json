@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Emily Johnson",
     "role": "Software Developer",
-    "image": "assets/c.jpg",
+    "image": "https://img.daisyui.com/images/profile/demo/spiderperson@192.webp",
     "stars": 5,
     "description": "I was at a crossroads in my career. I had some experience in marketing but lacked confidence in digital tools and strategy. This course gave me the direction I needed."
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "James Wilson",
     "role": "Business Analyst",
-    "image": "assets/c.jpg",
+    "image": "https://img.daisyui.com/images/profile/demo/spiderperson@192.webp",
     "stars": 5,
     "description": "I always wanted to learn coding, but most tutorials left me confused. This course gave me structure and clarity!"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Laura Smith",
     "role": "Content Creator",
-    "image": "assets/c.jpg",
+    "image": "https://img.daisyui.com/images/profile/demo/spiderperson@192.webp",
     "stars": 5,
     "description": "I was learning design from YouTube. This course helped me go deeper — from wireframes to prototypes."
   },
@@ -27,16 +27,16 @@
     "id": 4,
     "name": "Michael Roberts",
     "role": "Digital Marketer",
-    "image": "assets/c.jpg",
-    "stars": 5,
+    "image": "https://img.daisyui.com/images/profile/demo/spiderperson@192.webp",
+    "stars": 4,
     "description": "I work full-time, so flexibility was key. The self-paced modules and real-world examples made learning enjoyable."
   },
   {
     "id": 5,
     "name": "Chris Brown",
     "role": "Web Developer",
-    "image": "assets/c.jpg",
-    "stars": 5,
+    "image": "https://img.daisyui.com/images/profile/demo/spiderperson@192.webp",
+    "stars": 4,
     "description": "With a busy schedule, this course fit perfectly. I gained new skills and confidence to take on new projects."
   }
 ]

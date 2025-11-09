@@ -14,7 +14,7 @@ const Hero = () => {
           
           {/* ✅ Modernized Status Badge (Fixed + Centered) */}
           <div className="flex justify-center lg:justify-start mb-5 mt-2 sm:mt-0">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-green-50 text-green-800 font-medium rounded-full px-3 sm:px-4 py-1 shadow-sm border border-green-200">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-blue-50 text-black font-medium rounded-full px-3 sm:px-4 py-1 shadow-sm border border-blue-200">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -48,20 +48,20 @@ const Hero = () => {
           </div>
 
           {/* Domain Search */}
-          <div className="flex w-full sm:w-auto border border-gray-300 rounded-md overflow-hidden">
+          <div className="flex w-full sm:w-auto border border-black rounded-md overflow-hidden">
             <input
               type="text"
               placeholder="Find your domain"
-              className="px-4 py-2 w-full focus:outline-none text-gray-700 placeholder-gray-400"
+              className="px-4 py-2 w-full focus:outline-none text-blue-900 placeholder-black"
             />
 
             {/* Desktop Button */}
-            <button className="hidden sm:flex bg-[#0e404a] cursor-pointer text-white font-semibold px-6 sm:px-8 py-2 hover:bg-[#05191d] transition rounded-md">
+            <button className="hidden sm:flex bg-blue-900 cursor-pointer text-white font-semibold px-6 sm:px-8 py-2 hover:bg-blue-800 transition rounded-md">
               Find Domain
             </button>
 
             {/* Mobile Icon Button */}
-            <button className="sm:hidden flex items-center justify-center bg-[#0e404a] text-white px-4 py-2 hover:bg-[#032127] transition rounded-md">
+            <button className="sm:hidden flex items-center justify-center bg-blue-900 text-white px-4 py-2 hover:bg-blue-800 transition rounded-md">
               <MagnifyingGlassIcon className="h-5 w-5" />
             </button>
           </div>

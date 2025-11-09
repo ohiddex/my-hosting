@@ -21,7 +21,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Hover delay fix (desktop)
   const handleMouseEnter = (menu) => {
     if (timer) clearTimeout(timer);
     setOpenMenu(menu);
@@ -31,15 +30,14 @@ const Navbar = () => {
     setTimer(newTimer);
   };
 
-  // Mobile dropdown toggle
   const toggleMobileDropdown = (menu) => {
     setMobileDropdown(mobileDropdown === menu ? null : menu);
   };
 
   const linkClass =
-    "px-3 py-2 text-[#0e404a] hover:text-[#0e404a] cursor-pointer transition font-medium flex items-center gap-1";
+    "px-3 py-2 text-blue-900 hover:text-blue-900 cursor-pointer transition font-medium flex items-center gap-1";
   const dropdownItemClass =
-    "flex items-start gap-3 p-3 rounded-lg hover:bg-[#0e404a]/10 transition";
+    "flex items-start gap-3 p-3 rounded-lg hover:bg-blue-900/10 transition";
 
   return (
     <div
@@ -48,13 +46,15 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-4 relative">
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img src="/hosting.png" alt="Logo" className="h-8 w-auto" />
-          <span className="text-2xl font-bold tracking-tight text-[#0e404a]">
-            HostKido
+      
+      
+         <NavLink className="flex items-center space-x-2" to='/'>
+           <img src="/web-logo.png" alt="Logo" className="h-8 w-auto" />
+          <span className="text-2xl font-bold tracking-tight text-blue-900">
+           Hostkloud
           </span>
-        </div>
+         </NavLink>
+   
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6 text-sm items-center relative">
@@ -77,13 +77,13 @@ const Navbar = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 bg-white rounded-xl shadow-xl p-6 w-[90vw] md:w-[850px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 z-50 border border-gray-100">
                 {/* Hosting */}
                 <div>
-                  <h3 className="font-semibold mb-3 text-[#0e404a]">Hosting</h3>
+                  <h3 className="font-semibold mb-3 text-blue-900">Hosting</h3>
                   <ul className="space-y-2">
                     <li>
                       <NavLink to="/web-hosting" className={dropdownItemClass}>
-                        <ServerIcon className="h-6 w-6 text-[#0e404a]" />
+                        <ServerIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             Web Hosting
                           </p>
                           <p className="text-sm text-gray-500">
@@ -94,9 +94,9 @@ const Navbar = () => {
                     </li>
                     <li>
                       <NavLink to="/cloud-hosting" className={dropdownItemClass}>
-                        <CloudIcon className="h-6 w-6 text-[#0e404a]" />
+                        <CloudIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             Cloud Hosting
                           </p>
                           <p className="text-sm text-gray-500">
@@ -110,9 +110,9 @@ const Navbar = () => {
                         to="/reseller-hosting"
                         className={dropdownItemClass}
                       >
-                        <GlobeAltIcon className="h-6 w-6 text-[#0e404a]" />
+                        <GlobeAltIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             Reseller Hosting
                           </p>
                           <p className="text-sm text-gray-500">
@@ -126,7 +126,7 @@ const Navbar = () => {
 
                 {/* WordPress */}
                 <div>
-                  <h3 className="font-semibold mb-3 text-[#0e404a]">
+                  <h3 className="font-semibold mb-3 text-blue-900">
                     WordPress
                   </h3>
                   <ul className="space-y-2">
@@ -135,9 +135,9 @@ const Navbar = () => {
                         to="/wordpress-hosting"
                         className={dropdownItemClass}
                       >
-                        <CloudIcon className="h-6 w-6 text-[#0e404a]" />
+                        <CloudIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             WP Hosting
                           </p>
                           <p className="text-sm text-gray-500">
@@ -151,9 +151,9 @@ const Navbar = () => {
                         to="/woocommerce-hosting"
                         className={dropdownItemClass}
                       >
-                        <GlobeAltIcon className="h-6 w-6 text-[#0e404a]" />
+                        <GlobeAltIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             WooCommerce Hosting
                           </p>
                           <p className="text-sm text-gray-500">
@@ -167,15 +167,15 @@ const Navbar = () => {
 
                 {/* VPS */}
                 <div>
-                  <h3 className="font-semibold mb-3 text-[#0e404a]">
+                  <h3 className="font-semibold mb-3 text-blue-900">
                     VPS Server
                   </h3>
                   <ul className="space-y-2">
                     <li>
                       <NavLink to="/vps-cloud" className={dropdownItemClass}>
-                        <CloudIcon className="h-6 w-6 text-[#0e404a]" />
+                        <CloudIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             Cloud VPS
                           </p>
                           <p className="text-sm text-gray-500">
@@ -186,9 +186,9 @@ const Navbar = () => {
                     </li>
                     <li>
                       <NavLink to="/cpanel-vps" className={dropdownItemClass}>
-                        <ServerIcon className="h-6 w-6 text-[#0e404a]" />
+                        <ServerIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             cPanel VPS
                           </p>
                           <p className="text-sm text-gray-500">
@@ -199,9 +199,9 @@ const Navbar = () => {
                     </li>
                     <li>
                       <NavLink to="/business-email" className={dropdownItemClass}>
-                        <EnvelopeIcon className="h-6 w-6 text-[#0e404a]" />
+                        <EnvelopeIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             Business Email
                           </p>
                           <p className="text-sm text-gray-500">
@@ -215,15 +215,15 @@ const Navbar = () => {
 
                 {/* BDIX */}
                 <div>
-                  <h3 className="font-semibold mb-3 text-[#0e404a]">
+                  <h3 className="font-semibold mb-3 text-blue-900">
                     BDIX Connected
                   </h3>
                   <ul className="space-y-2">
                     <li>
                       <NavLink to="/bdix-hosting" className={dropdownItemClass}>
-                        <GlobeAltIcon className="h-6 w-6 text-[#0e404a]" />
+                        <GlobeAltIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             BDIX Hosting
                           </p>
                           <p className="text-sm text-gray-500">
@@ -237,9 +237,9 @@ const Navbar = () => {
                         to="/bdix-reseller"
                         className={dropdownItemClass}
                       >
-                        <ServerIcon className="h-6 w-6 text-[#0e404a]" />
+                        <ServerIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             BDIX Reseller
                           </p>
                           <p className="text-sm text-gray-500">
@@ -250,9 +250,9 @@ const Navbar = () => {
                     </li>
                     <li>
                       <NavLink to="/bdix-vps" className={dropdownItemClass}>
-                        <CloudIcon className="h-6 w-6 text-[#0e404a]" />
+                        <CloudIcon className="h-6 w-6 text-blue-900" />
                         <div>
-                          <p className="font-semibold text-[#0e404a]">
+                          <p className="font-semibold text-blue-900">
                             BDIX VPS
                           </p>
                           <p className="text-sm text-gray-500">
@@ -283,7 +283,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/register-domain"
-                    className="flex items-center gap-2 px-3 py-2 hover:bg-[#0e404a]/10 rounded-md transition text-[#0e404a]"
+                    className="flex items-center gap-2 px-3 py-2 hover:bg-blue-900/10 rounded-md transition text-blue-900"
                   >
                     <GlobeAltIcon className="h-5 w-5" /> Register Domain
                   </NavLink>
@@ -291,7 +291,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/transfer-domain"
-                    className="flex items-center gap-2 px-3 py-2 hover:bg-[#0e404a]/10 rounded-md transition text-[#0e404a]"
+                    className="flex items-center gap-2 px-3 py-2 hover:bg-blue-900/10 rounded-md transition text-blue-900"
                   >
                     <ServerIcon className="h-5 w-5" /> Transfer Domain
                   </NavLink>
@@ -312,7 +312,7 @@ const Navbar = () => {
         <div className="hidden lg:flex">
           <a
             href="/client"
-            className="btn bg-[#0e404a] border-none rounded-md hover:bg-[#0e404a]/90 text-lg shadow-none text-white font-medium py-2 px-6"
+            className="btn bg-blue-900 border-none rounded-md hover:bg-blue-800 text-lg shadow-none text-white font-medium py-2 px-6"
           >
             Client Area
           </a>
@@ -322,22 +322,21 @@ const Navbar = () => {
         <div className="lg:hidden">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="btn btn-ghost text-[#0e404a]"
+            className="btn btn-ghost text-blue-900"
           >
             {mobileOpen ? "✖" : "☰"}
           </button>
 
           {mobileOpen && (
             <div className="absolute top-full left-0 right-0 bg-white shadow-lg flex flex-col p-3 z-50">
-              {/* Top-level */}
-              <NavLink to="/" className="py-2 px-2 text-[#0e404a]">
+              <NavLink to="/" className="py-2 px-2 text-blue-900">
                 Home
               </NavLink>
 
               {/* HOSTING MOBILE */}
               <button
                 onClick={() => toggleMobileDropdown("hosting")}
-                className="flex justify-between items-center py-2 px-2 text-[#0e404a] font-medium"
+                className="flex justify-between items-center py-2 px-2 text-blue-900 font-medium"
               >
                 Hosting
                 <ChevronDownIcon
@@ -348,16 +347,16 @@ const Navbar = () => {
               </button>
               {mobileDropdown === "hosting" && (
                 <div className="pl-4 border-l ml-2 space-y-1">
-                  <NavLink to="/web-hosting" className="block py-1 text-sm">
+                  <NavLink to="/web-hosting" className="block text-black py-1 text-sm">
                     Web Hosting
                   </NavLink>
-                  <NavLink to="/cloud-hosting" className="block py-1 text-sm">
+                  <NavLink to="/cloud-hosting" className="block text-black py-1 text-sm">
                     Cloud Hosting
                   </NavLink>
-                  <NavLink to="/reseller-hosting" className="block py-1 text-sm">
+                  <NavLink to="/reseller-hosting" className="block text-black py-1 text-sm">
                     Reseller Hosting
                   </NavLink>
-                  <NavLink to="/vps-cloud" className="block py-1 text-sm">
+                  <NavLink to="/vps-cloud" className="block py-1 text-black text-sm">
                     Cloud VPS
                   </NavLink>
                 </div>
@@ -366,7 +365,7 @@ const Navbar = () => {
               {/* DOMAIN MOBILE */}
               <button
                 onClick={() => toggleMobileDropdown("domain")}
-                className="flex justify-between items-center py-2 px-2 text-[#0e404a] font-medium"
+                className="flex justify-between items-center py-2 px-2 text-blue-900 font-medium"
               >
                 Domain
                 <ChevronDownIcon
@@ -377,24 +376,24 @@ const Navbar = () => {
               </button>
               {mobileDropdown === "domain" && (
                 <div className="pl-4 border-l ml-2 space-y-1">
-                  <NavLink to="/register-domain" className="block py-1 text-sm">
+                  <NavLink to="/register-domain" className="block py-1 text-black text-sm">
                     Register Domain
                   </NavLink>
-                  <NavLink to="/transfer-domain" className="block py-1 text-sm">
+                  <NavLink to="/transfer-domain" className="block py-1 text-black text-sm">
                     Transfer Domain
                   </NavLink>
                 </div>
               )}
 
-              <NavLink to="/affiliate" className="py-2 px-2 text-[#0e404a]">
+              <NavLink to="/affiliate" className="py-2 px-2 text-blue-900">
                 Affiliate
               </NavLink>
-              <NavLink to="/contact" className="py-2 px-2 text-[#0e404a]">
+              <NavLink to="/contact" className="py-2 px-2 text-blue-900">
                 Contact
               </NavLink>
               <a
                 href="/client"
-                className="btn bg-[#0e404a] text-white mt-2 w-full"
+                className="btn bg-blue-900 text-white mt-2 w-full"
               >
                 Client Area
               </a>
